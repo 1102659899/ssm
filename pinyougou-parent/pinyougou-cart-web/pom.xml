@@ -1,22 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>pinyougou-parent</artifactId>
         <groupId>com.pinyougou</groupId>
+        <artifactId>pinyougou-parent</artifactId>
         <version>0.0.3-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
     <artifactId>pinyougou-cart-web</artifactId>
     <packaging>war</packaging>
 
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-    </properties>
 
     <dependencies>
         <!-- Spring -->
@@ -100,7 +92,6 @@
         </dependency>
 
 
-
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-cas</artifactId>
@@ -118,13 +109,6 @@
             </exclusions>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.pinyougou</groupId>
-            <artifactId>pinyougou-cart-interface</artifactId>
-            <version>0.0.3-SNAPSHOT</version>
-        </dependency>
-
         <dependency>
             <groupId>com.pinyougou</groupId>
             <artifactId>pinyougou-common</artifactId>
@@ -132,7 +116,22 @@
         </dependency>
         <dependency>
             <groupId>com.pinyougou</groupId>
+            <artifactId>pinyougou-cart-interface</artifactId>
+            <version>0.0.3-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pinyougou</groupId>
             <artifactId>pinyougou-user-interface</artifactId>
+            <version>0.0.3-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pinyougou</groupId>
+            <artifactId>pinyougou-order-interface</artifactId>
+            <version>0.0.3-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pinyougou</groupId>
+            <artifactId>pinyougou-pay-interface</artifactId>
             <version>0.0.3-SNAPSHOT</version>
         </dependency>
     </dependencies>

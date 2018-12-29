@@ -226,7 +226,7 @@ public class GoodsController {
 	@RequestMapping("/genHtml")
 	public void genHtml(Long goodsId){
 		
-//		itemPageService.genItemHtml(goodsId);
+		//itemPageService.genItemHtml(goodsId);
 		
 	}
 	

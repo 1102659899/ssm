@@ -1,8 +1,6 @@
 package com.pinyougou.user.service;
 import java.util.List;
-
 import com.pinyougou.pojo.TbAddress;
-
 
 import entity.PageResult;
 /**
@@ -59,7 +57,7 @@ public interface AddressService {
 	 * @return
 	 */
 	public PageResult findPage(TbAddress address, int pageNum, int pageSize);
-
-
+	
 	public List<TbAddress> findListByUserId(String userId);
+	
 }

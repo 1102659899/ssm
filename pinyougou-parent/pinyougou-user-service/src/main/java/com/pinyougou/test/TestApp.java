@@ -35,7 +35,7 @@ public class TestApp {
             @Override
             public Message createMessage(Session session) throws JMSException {
                 MapMessage mapMessage = session.createMapMessage();
-                mapMessage.setString("mobile", "");//手机号
+                mapMessage.setString("mobile", "18707153308");//手机号
                 mapMessage.setString("template_code", "SMS_123672285");//模板编号
                 mapMessage.setString("sign_name", "品优taotao");//签名
                 Map m=new HashMap<>();

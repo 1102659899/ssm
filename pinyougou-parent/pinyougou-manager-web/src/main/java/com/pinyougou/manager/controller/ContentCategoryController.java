@@ -1,6 +1,7 @@
 package com.pinyougou.manager.controller;
 import java.util.List;
 
+import com.pinyougou.content.service.ContentCategoryService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,33 +20,33 @@ import entity.Result;
 @RequestMapping("/contentCategory")
 public class ContentCategoryController {
 
-	/*@Reference
+	@Reference
 	private ContentCategoryService contentCategoryService;
 	
-	*//**
+	/**
 	 * 返回全部列表
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/findAll")
 	public List<TbContentCategory> findAll(){			
 		return contentCategoryService.findAll();
 	}
 	
 	
-	*//**
+	/**
 	 * 返回全部列表
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/findPage")
 	public PageResult  findPage(int page,int rows){			
 		return contentCategoryService.findPage(page, rows);
 	}
 	
-	*//**
+	/**
 	 * 增加
 	 * @param contentCategory
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/add")
 	public Result add(@RequestBody TbContentCategory contentCategory){
 		try {
@@ -57,11 +58,11 @@ public class ContentCategoryController {
 		}
 	}
 	
-	*//**
+	/**
 	 * 修改
 	 * @param contentCategory
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/update")
 	public Result update(@RequestBody TbContentCategory contentCategory){
 		try {
@@ -73,21 +74,21 @@ public class ContentCategoryController {
 		}
 	}	
 	
-	*//**
+	/**
 	 * 获取实体
 	 * @param id
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/findOne")
 	public TbContentCategory findOne(Long id){
 		return contentCategoryService.findOne(id);		
 	}
 	
-	*//**
+	/**
 	 * 批量删除
 	 * @param ids
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/delete")
 	public Result delete(Long [] ids){
 		try {
@@ -98,17 +99,17 @@ public class ContentCategoryController {
 			return new Result(false, "删除失败");
 		}
 	}
-	
-		*//**
+
+	/**
 	 * 查询+分页
-	 * @param brand
+	 * @param contentCategory
 	 * @param page
 	 * @param rows
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/search")
 	public PageResult search(@RequestBody TbContentCategory contentCategory, int page, int rows  ){
 		return contentCategoryService.findPage(contentCategory, page, rows);		
-	}*/
+	}
 	
 }

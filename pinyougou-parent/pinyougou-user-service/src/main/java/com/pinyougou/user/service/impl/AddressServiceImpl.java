@@ -1,17 +1,14 @@
 package com.pinyougou.user.service.impl;
 import java.util.List;
-
-import com.pinyougou.mapper.TbAddressMapper;
-import com.pinyougou.pojo.TbAddress;
-import com.pinyougou.user.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-
+import com.pinyougou.mapper.TbAddressMapper;
+import com.pinyougou.pojo.TbAddress;
 import com.pinyougou.pojo.TbAddressExample;
 import com.pinyougou.pojo.TbAddressExample.Criteria;
-
+import com.pinyougou.user.service.AddressService;
 
 import entity.PageResult;
 
@@ -129,11 +126,11 @@ public class AddressServiceImpl implements AddressService {
 
 	@Override
 	public List<TbAddress> findListByUserId(String userId) {
-
-		TbAddressExample example = new TbAddressExample();
+		
+		TbAddressExample example=new TbAddressExample();
 		Criteria criteria = example.createCriteria();
 		criteria.andUserIdEqualTo(userId);
 		return addressMapper.selectByExample(example);
 	}
-
+	
 }

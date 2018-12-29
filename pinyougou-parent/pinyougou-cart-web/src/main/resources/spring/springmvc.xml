@@ -10,7 +10,7 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <!--<context:property-placeholder location="classpath:config/application.properties" />-->
+    <context:property-placeholder location="classpath:config/application.properties" />
 	
 	<mvc:annotation-driven>
 	  <mvc:message-converters register-defaults="true">
@@ -30,6 +30,6 @@
 	<!-- 引用dubbo 服务 -->
 	<dubbo:application name="pinyougou-cart-web" />
 	<dubbo:registry address="zookeeper://192.168.25.168:2181"/>
-	<dubbo:annotation package="com.pinyougou.controller" />
+	<dubbo:annotation package="com.pinyougou.cart.controller" />
 
 </beans>

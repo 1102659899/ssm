@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
@@ -42,6 +43,11 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 		Map map=new HashMap();
 		//空格处理
 		String keywords= (String)searchMap.get("keywords");
+		if (StringUtils.isEmpty(keywords)) {
+
+			keywords = "*";
+		}
+
 		searchMap.put("keywords", keywords.replace(" ", ""));//关键字去掉空格 
 		
 		//1.查询列表

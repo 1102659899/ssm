@@ -94,11 +94,11 @@
 		<artifactId>pinyougou-sellergoods-interface</artifactId>
 		<version>0.0.3-SNAPSHOT</version>
 	</dependency>
-	<!--<dependency>
+	<dependency>
 		<groupId>com.pinyougou</groupId>
 		<artifactId>pinyougou-content-interface</artifactId>
 		<version>0.0.3-SNAPSHOT</version>
-	</dependency>-->
+	</dependency>
 	<dependency>
 		<groupId>com.pinyougou</groupId>
 		<artifactId>pinyougou-common</artifactId>
